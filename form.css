@@ -1,0 +1,31 @@
+form{
+    width: fit-content;
+    padding: 10px ;
+
+}
+form div{
+    margin: .5rem;
+}
+form label{
+    display: inline-block;
+    width: 6rem;
+}
+input[type="submit"]{
+    padding: .2rem 1rem;
+    background-color: red;
+    color: whitesmoke;
+    font-weight: bold;
+    border: wheat solid thin;
+    border-radius: 1rem;
+}
+input[type="reset"] , button{
+    padding: .2rem 1rem;
+    background-color: lightseagreen;
+    color: whitesmoke;
+    font-weight: bold;
+    border: gainsboro solid thin;
+    border-radius: 1rem;
+}input:required{
+    border: gainsboro solid thin;
+    border-bottom: red solid medium;
+}
