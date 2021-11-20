@@ -27,7 +27,7 @@
 
             <div>
                 <label for="">Gender</label>
-                <input type="radio" name="genther" id="genther" value="male" checked>Male
+                <input type="radio" name="genther" id="genther_male" value="male" checked>Male
                 <input type="radio" name="genther" id="genther_female" value="female">Female
             </div>
 
@@ -50,7 +50,7 @@
 
             <div>
                 <label for="">Email</label>
-                <input type="email" name="email" id="name" required placeholder="ex:abc@gmail.com" value="vanhung@gmail.com">
+                <input type="email" name="email" id="email" required placeholder="ex:abc@gmail.com" value="vanhung@gmail.com">
             </div>
 
             <div>
@@ -69,8 +69,8 @@
             </div>
 
             <div>
-                <label for="">Commen</label>
-                <textarea name="commen" id="commen" cols="10" rows="3"></textarea>
+                <label for="">Comment</label>
+                <textarea name="comment" id="comment" cols="10" rows="3"></textarea>
             </div>
             
         </fieldset>
@@ -85,7 +85,8 @@
 
             //lay du lieu vua nhap tren form
             let name = document.getElementById("name").value.trim();
-            let gender = document.getElementById("genther").value;
+            let gender = document.getElementById("genther_male").checked?"male":"female";
+            
             let dob = document.getElementById("dob").value;
             let add = document.getElementById("add").value.trim();
             let email = document.getElementById("email").value;
@@ -97,6 +98,7 @@
             let a=["This page says"];
             a.push(` - Name: ${name}`);
             a.push(` - Genther: ${gender}`);
+            
             a.push(` - Birthday: ${dob}`);
             a.push(` - Address: ${add}`);
             a.push(` - Mail: ${email}`);
