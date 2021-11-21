@@ -1,2 +1,2 @@
 # Pretest
- https://vanhung2003.github.io/Pretest/
+https://github.com/VanHung2003/Pretest
