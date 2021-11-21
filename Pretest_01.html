@@ -33,9 +33,9 @@
 
             <div>
                 <label for="">Hobbies</label>
-                <input type="checkbox" name="lang_1" id="lang_1" value="Shopping" checked>Shopping
-                <input type="checkbox" name="lang_2" id="lang_2" value="Eating out">Eating out
-                <input type="checkbox" name="lang_3" id="lang_3" value="Sporting">Sporting
+                <input type="checkbox" name="lang" id="lang_1" value="Shopping" checked>Shopping
+                <input type="checkbox" name="lang" id="lang_2" value="Eating out" checked>Eating out
+                <input type="checkbox" name="lang" id="lang_3" value="Sporting">Sporting
             </div>
 
             <div>
@@ -87,6 +87,9 @@
             let name = document.getElementById("name").value.trim();
             let gender = document.getElementById("genther_male").checked?"male":"female";
             
+            let hobbies2 = [];
+            let hobbies = document.querySelectorAll('input[type="checkbox"]:checked');
+            
             let dob = document.getElementById("dob").value;
             let add = document.getElementById("add").value.trim();
             let email = document.getElementById("email").value;
@@ -94,11 +97,15 @@
             let city = document.getElementById("city").value;
             let commen = document.getElementById("comment").value;
 
+            for (let item of hobbies){
+                hobbies2.push(item.value);
+            }
+
             //tao 1 mang chua thong tin
             let a=["This page says"];
             a.push(` - Name: ${name}`);
             a.push(` - Genther: ${gender}`);
-            
+            a.push(` - Hobbies: ${hobbies2.join(",")}`);
             a.push(` - Birthday: ${dob}`);
             a.push(` - Address: ${add}`);
             a.push(` - Mail: ${email}`);

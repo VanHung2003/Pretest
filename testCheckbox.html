@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+</head>
+
+<body>
+    <h2>Checkbox Demo</h2>
+    <hr>
+    <form action="" id="form-check">
+        <div>
+            <label for="">Languages : </label>
+            <input type="checkbox" name="lan" id="vn" value="Vietnamese" checked> VN -
+            <input type="checkbox" name="lan" id="en" value="English" checked> EN -
+            <input type="checkbox" name="lan" id="fr" value="French"> FR
+        </div>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        document.getElementById("form-check").onsubmit = function (e) {
+            e.preventDefault();
+
+            var lans = [] ; 
+            var chk = document.querySelectorAll('input[type="checkbox"]:checked');
+            
+            for (var item of chk) {
+                lans.push(item.value);
+            }
+            document.getElementById("result").innerHTML = lans.join(",");
+        }
+        
+    </script>
+</body>
+
+</html>

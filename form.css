@@ -6,9 +6,9 @@ form{
 form div{
     margin: .5rem;
 }
-form label{
+form label {
     display: inline-block;
-    width: 10rem;
+    width: 12rem;
 }
 input[type="submit"]{
     padding: .2rem 1rem;

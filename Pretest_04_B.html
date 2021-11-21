@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretest 04-B</title>
+    <link rel="stylesheet" href="pre4.css">
+    <link rel="stylesheet" href="form.css">
+    <style>
+        b{
+            color: red;
+        }
+    </style>
+</head>
+<body><p></p>
+    <p id="a" style="color:rgb(248, 113, 113) ;">Contact Bridges</p>
+    
+    <div class="d1">
+        <a href="" id="d1">HOME</a>
+        <a href="" id="d1">WORLD BRIDES</a>
+        <a href="" id="d1">TOP LONGEST</a>
+        <a href="" id="d1">TOP HIGHEST</a>
+        <a href="" id="d1">CONTACT</a>
+    </div>
+    <hr>
+    <form action="" id="form-pre4">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <div>
+                <label for="">Name</label>
+                <input type="text" name="name" id="name" value="Hung" required placeholder="Enter your name !"><b>*</b>
+            </div>
+
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email" id="email" value="vanhung@gmail.com" required placeholder="Enter your email !"><b>*</b>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Review:</legend>
+            <div>
+                <label for="">How did you hear about us?</label>
+                <select name="add" id="add">
+                    <option value="Google">Google</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Advert">Advert </option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Would you visit again?</label>
+                <input type="radio" name="YN" id="yes">Yes
+                <input type="radio" name="YN" id="no">No
+                <input type="radio" name="YN" id="maybe">Maybe
+            </div>
+
+            <div>
+                <label for="">Comments:</label> <br>
+                <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
+            </div>
+
+            <div>
+                <input type="checkbox" required checked>
+                <label for="">Sign me up for email updates</label>
+            </div>
+
+            <input type="submit" value="Submit review">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+
+    <script>
+        document.getElementById("form-pre4").onsubmit = function(e){
+            e.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+
+            r=/^[a-z A-Z]{3,30}$/;
+            if(r.test(name)==false){
+                alert("Tên của bạn không hợp lệ vui lòng nhập lại !");
+                document.getElementById("name").focus();
+                return;
+            }
+            
+            alert('Welcome to Education Web');
+        }
+    </script>
+
+</body>
+</html>

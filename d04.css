@@ -1,0 +1,54 @@
+header {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;;
+}
+
+nav {
+     border-top: 1px solid brown;
+     border-bottom: 1px solid brown;
+     padding: 10px 50px;
+}
+
+.link {
+     display: flex;
+     justify-content: space-between;
+     color: blue;
+}
+
+a.about {
+     font-size: 60px;
+     font-style: italic;
+     color: brown;
+}
+
+.left {
+     float: left;
+     width: 85%;
+}
+.right {
+     float: left;
+     width: 15%;
+}
+.left img {
+     width: 100%;
+}
+.right img {
+    display: block;
+    width: 100%;
+}   
+.collection {
+     width: 80%;
+     margin: 0 auto;
+}
+.clear {
+     clear: both;
+}
+footer {
+     text-align: center;
+     font-size: 30px;
+}
